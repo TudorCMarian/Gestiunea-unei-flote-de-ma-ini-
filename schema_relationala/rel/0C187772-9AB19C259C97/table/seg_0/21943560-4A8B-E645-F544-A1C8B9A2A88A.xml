@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="21943560-4A8B-E645-F544-A1C8B9A2A88A" schemaObject="EAA00E9C-BF12-F056-81C7-29F087BDA389" name="USER_VEHICLES">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>BD138</sourceObjSchema>
+<sourceObjName>USER_VEHICLES</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>0C5B9FD9-CCD7-37EB-2CA4-5F2D9DA2069D</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="USER_ID" id="E37101B7-E431-85D9-0EEF-7E6F3C72DAB8">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>USER_VEHICLES</sourceObjSchema>
+<sourceObjName>USER_ID</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>B6B80637-45A7-530B-55C3-1C1271379DFD</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="88C8D8A5-7CFD-AD68-6BF7-7750B9080609" referredColumn="6D71C8ED-D51E-850E-3A67-167970566B46"/>
+</associations>
+</Column>
+<Column name="VEHICLE_ID" id="88FE1A52-52B6-0D1F-F21E-360E55135DF6">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>USER_VEHICLES</sourceObjSchema>
+<sourceObjName>VEHICLE_ID</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>C3ED93EF-1BA5-E8B1-B46E-545C2AEB3A48</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="885A44BB-E44F-7F88-0AAA-3D4341750CFF" referredColumn="27931E9D-A1FE-FB31-EBFA-84280850CE63"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="432101A6-21B7-6FE7-FF1B-16395577338A" name="PK_USERVEHICLES">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>BD138</sourceObjSchema>
+<sourceObjName>PK_USERVEHICLES</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>39931CDD-8F6A-BC2C-A263-6C5FFF246FE7</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E37101B7-E431-85D9-0EEF-7E6F3C72DAB8"/>
+<colUsage columnID="88FE1A52-52B6-0D1F-F21E-360E55135DF6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A9174DD5-DDFD-E06F-D916-37621CE0DCAD" schemaObject="EAA00E9C-BF12-F056-81C7-29F087BDA389" name="PK_USERVEHICLES">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>BD138</sourceObjSchema>
+<sourceObjName>PK_USERVEHICLES</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>5C1EDD5B-867B-06FA-774F-34CF8ECC8A5A</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E37101B7-E431-85D9-0EEF-7E6F3C72DAB8"/>
+<colUsage columnID="88FE1A52-52B6-0D1F-F21E-360E55135DF6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8EAC41A8-7BB5-8DC6-3C14-1DC8EFCF549B" name="FK_USERVEHICLES_USERS">
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E37101B7-E431-85D9-0EEF-7E6F3C72DAB8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AEF3A2B0-A85A-0A90-F78F-E8AC1D3772B9" name="FK_USERVEHICLES_VEHICLES">
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="88FE1A52-52B6-0D1F-F21E-360E55135DF6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

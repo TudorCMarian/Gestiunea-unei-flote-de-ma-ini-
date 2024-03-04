@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    @font-face {
+      font-family: 'SansationLight';
+      src: url('./FontSansationLight/SansationLight.eot');
+      src: local('SansationLight'), url('./FontSansationLight/SansationLight.woff') format('woff'), url('./FontSansationLight/SansationLight.ttf') format('truetype');
+    }
+    * {box-sizing: border-box}
+
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'SansationLight' !important;
+      background: rgb(22,22,22);
+    }
+
+    .tablink {
+      font-weight: bold;
+      font-family: 'SansationLight' !important;
+      background-color: #557;
+      color: azure;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 12px 12px;
+      font-size: 17px;
+      width: 12.5%;
+    }
+
+    .tablink:hover {
+      background-color: #579;
+    }
+
+    .tabcontent {
+      color: white;
+      padding: 100px 20px;
+      height: 100%;
+      text-align: center;  /* Adăugat pentru a centra conținutul */
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;  /* Adăugat pentru a centra butoanele */
+    }
+
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      border-color: white;
+      text-align: center;
+    }
+
+    th, td {
+      padding: 15px;
+    }
+  </style>
+  <script>
+    function myFunction() {
+      var rate_value = document.getElementsByName('region_id');
+
+      if(rate_value[0]){
+        alert(rate_value[0].value);
+        document.getElementsByName('employee_id').value=rate_value[0].value;
+        alert(document.getElementsByName('employee_id').value);
+      }
+    </script>
+</head>
+<body>
+
+  <a href="users"><button class="tablink" style="background:rgb(70,130,180); color: white">Users</button></a>
+  <a href="vehicles"><button class="tablink">Vehicles</button></a>
+  <a href="brands"><button class="tablink">Brands</button></a>
+  <a href="models"><button class="tablink">Models</button></a>
+  <a href="userVehicles"><button class="tablink">User Vehicles</button></a>
+  <a href="privacy"><button class="tablink">Privacy</button></a>
+
+
+  <div id="Consilieri" class="tabcontent">
+    <br>
+    <h1 id="h3">Users</h1>
+    <br><br>
+    <div class="btn-group">
+      <a href="addUser"><button type="button" class="btn btn-primary">Adauga user</button></a>
+      <br>
+      <br>
+    </div>
+    <br><br><br><br>
+    <table style="width:70%">
+      <tr>
+        <th>Nr. crt.</th>
+        <th>first_name</th>
+        <th>last_name</th>
+        <th>email</th>
+        <th>&nbsp;birth_date&nbsp;</th>
+        <th>&nbsp;registration_date&nbsp;</th>
+        <th>Editare/Stergere</th>
+      </tr>
+      {% for user in users %}
+      <tr>
+        <td>{{loop.index}}</td>
+        <td>{{user["first_name"]}}</td>
+        <td>{{user["last_name"]}}</td>
+        <td>{{user["email"]}}</td>
+        <td>{{user["birth_date"]}}</td>
+        <td>{{user["registration_date"]}}</td>
+        <td>
+          <form class="was-validated" method="POST" action="/getUser">
+            <button type="submit" name="id" value="{{user['id']}}" class="btn btn-primary">Editeaza user</button>
+          </form>
+          <form class="was-validated" method="POST" action="/deleteUser">
+            <button type="submit" name="id" value="{{user['id']}}" class="btn btn-primary">Sterge user</button>
+          </form>
+          <a href="addUserVehicle"><button type="button" class="btn btn-primary">Add Vehicle</button></a>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+    <br><br><br>
+  </div>
+</body>
+</html>

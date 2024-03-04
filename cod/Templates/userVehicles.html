@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Vehicles</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        @font-face {
+            font-family: 'SansationLight';
+            src: url('./FontSansationLight/SansationLight.eot');
+            src: local('SansationLight'), url('./FontSansationLight/SansationLight.woff') format('woff'), url('./FontSansationLight/SansationLight.ttf') format('truetype');
+        }
+
+        * {box-sizing: border-box}
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'SansationLight' !important;
+            background: rgb(22,22,22);
+        }
+
+        .tablink {
+            font-weight: bold;
+            font-family: 'SansationLight' !important;
+            background-color: #557;
+            color: azure;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 12px;
+            font-size: 17px;
+            width: 12.5%;
+        }
+
+        .tablink:hover {
+            background-color: #579;
+        }
+
+        .tabcontent {
+            color: white;
+            padding: 100px 20px;
+            height: 100%;
+            text-align: center;  /* Added to center content */
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;  /* Added to center buttons */
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            border-color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+    <script>
+        function myFunction() {
+            var rate_value = document.getElementsByName('region_id');
+
+            if(rate_value[0]){
+                alert(rate_value[0].value);
+                document.getElementsByName('employee_id').value=rate_value[0].value;
+                alert(document.getElementsByName('employee_id').value);
+            }
+        }
+    </script>
+</head>
+<body>
+
+<a href="users"><button class="tablink" >Users</button></a>
+<a href="vehicles"><button class="tablink">Vehicles</button></a>
+<a href="brands"><button class="tablink">Brands</button></a>
+<a href="models"><button class="tablink">Models</button></a>
+<a href="userVehicles"><button class="tablink" style="background:rgb(70,130,180); color: white">User Vehicles</button></a>
+<a href="privacy"><button class="tablink">Privacy</button></a>
+
+<div id="UserVehicles" class="tabcontent">
+    <br>
+    <h1 id="h3">User Vehicles</h1>
+    <br><br>
+    <div class="btn-group">
+        <a href="addUserVehicle"><button type="button" class="btn btn-primary">Add User Vehicle</button></a>
+        <br>
+        <br>
+    </div>
+    <br><br><br><br>
+    <table style="width:70%">
+        <tr>
+            <th>Nr. crt.</th>
+            <th>User ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Vehicle ID</th>
+            <th>VIN</th>
+            <th>License Plate</th>
+            <th>Registration Date</th>
+            <th>Exterior Color</th>
+            <th>Model Name</th>
+            <th>Edit/Delete</th>
+        </tr>
+        <script>
+            console.log(user_vehicles);
+        </script>
+        {% for user_vehicle in user_vehicles %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ user_vehicle['user_id'] }}</td>
+            <td>{{ user_vehicle['first_name'] }}</td>
+            <td>{{ user_vehicle['last_name'] }}</td>
+            <td>{{ user_vehicle['vehicle_id'] }}</td>
+            <td>{{ user_vehicle['vin'] }}</td>
+            <td>{{ user_vehicle['license_plate'] }}</td>
+            <td>{{ user_vehicle['registration_date'] }}</td>
+            <td>{{ user_vehicle['exterior_color'] }}</td>
+            <td>{{ user_vehicle['model_name'] }}</td>
+            <td>
+                <form class="was-validated" method="POST" action="/editUserVehicle">
+                    <button type="submit" name="id" value="{{ user_vehicle['id'] }}" class="btn btn-primary">Edit Vehicle</button>
+                </form>
+                <form class="was-validated" method="POST" action="/deleteUserVehicle">
+                    <button type="submit" name="id" value="{{ user_vehicle['id'] }}" class="btn btn-primary">Remove Vehicle</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br><br><br>
+</div>
+
+</body>
+</html>

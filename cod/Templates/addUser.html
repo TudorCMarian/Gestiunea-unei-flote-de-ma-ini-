@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <style>
+    @font-face {
+      font-family: 'SansationLight';
+      src: url('./FontSansationLight/SansationLight.eot');
+      src: local('SansationLight'), url('./FontSansationLight/SansationLight.woff') format('woff'), url('./FontSansationLight/SansationLight.ttf') format('truetype');
+    }
+
+    * {box-sizing: border-box}
+
+    /* Set height of body and the document to 100% */
+    body, html {
+        height: 100%;
+        margin: 0;
+        font-family: 'SansationLight' !important;
+        background: rgb(22, 22, 22);
+    }
+
+    /* Style tab links */
+    .tablink {
+      font-weight: bold;
+      font-family: 'SansationLight' !important;
+      background-color: rgb(70, 130, 180);
+      color: white;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 12px 12px;
+      font-size: 17px;
+      width: 12.5%;
+    }
+
+    .tablink:hover {
+        background-color: rgb(185, 70, 145);
+    }
+
+    /* Style the tab content (and add height:100% for full page content) */
+    .tabcontent {
+        color: white;
+        padding: 100px 20px;
+        height: 100%;
+    }
+
+    table, th, td {
+        border: 3px solid black;
+        border-collapse: collapse;
+        border-color: rgb(81, 9, 73);
+        text-align: center;
+    }
+
+    th, td {
+        padding: 15px;
+    }
+
+    .radiotext {
+        margin: 10px 10px 0px 0px;
+    }
+
+    .form-container {
+        background: rgb(22, 22, 22);
+        padding: 20px;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+
+    .form-container label {
+        color: white;
+    }
+
+    .form-container input {
+        color: rgb(22, 22, 22);
+    }
+
+    .form-container button {
+        background: rgb(70, 130, 180);
+        color: white;
+        margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<a href="users"><button class="tablink" style="background:rgb(70,130,180); color: white">Users</button></a>
+  <a href="vehicles"><button class="tablink">Vehicles</button></a>
+  <a href="brands"><button class="tablink">Brands</button></a>
+  <a href="models"><button class="tablink">Models</button></a>
+  <a href="userVehicles"><button class="tablink">User Vehicles</button></a>
+ <a href="privacy"><button class="tablink">Privacy</button></a>
+
+  <div id="Client" class="tabcontent">
+      <br>
+      <h1 id="h3">Adauga user</h1>
+      <br><br><br>
+      <div class="form-container">
+        <form class="was-validated" method="POST" action="/addUser">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label>Nume</label>
+              <input name="first_name" type="text" class="form-control is-valid" placeholder="ex. Popescu" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label>Prenume</label>
+              <input name="last_name" type="text" class="form-control is-valid"  placeholder="ex. Ion" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label>Email</label>
+              <input name="email" type="email" class="form-control is-valid" placeholder="ex. Popee@yahoo.com" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label>Data nasterii</label>
+              <input name="birth_date" type="date" class="form-control is-valid" placeholder="ex. 18.05.2001" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label>Data inregistrarii</label>
+              <input name="registration_date" type="date" class="form-control is-valid" placeholder="ex. 18.05.2001" required>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit">Adauga User</button>
+          <br>
+        </form>
+      </div>
+  </div>
+</body>
+</html>

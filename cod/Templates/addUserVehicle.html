@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        @font-face {
+            font-family: 'SansationLight';
+            src: url('./FontSansationLight/SansationLight.eot');
+            src: local('SansationLight'), url('./FontSansationLight/SansationLight.woff') format('woff'), url('./FontSansationLight/SansationLight.ttf') format('truetype');
+        }
+        * {
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'SansationLight' !important;
+            background: rgb(22,22,22);
+        }
+
+        .tablink {
+            font-weight: bold;
+            font-family: 'SansationLight' !important;
+            background-color: #557;
+            color: azure;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 12px;
+            font-size: 17px;
+            width: 12.5%;
+        }
+
+        .tablink:hover {
+            background-color: #579;
+        }
+
+        .tabcontent {
+            color: white;
+            padding: 100px 20px;
+            height: 100%;
+            text-align: center;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            border-color: white;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="users"><button class="tablink">Users</button></a>
+    <a href="vehicles"><button class="tablink">Vehicles</button></a>
+    <a href="brands"><button class="tablink">Brands</button></a>
+    <a href="models"><button class="tablink">Models</button></a>
+    <a href="userVehicles"><button class="tablink" style="background:rgb(70,130,180); color: white">User Vehicles</button></a>
+    <a href="privacy"><button class="tablink">Privacy</button></a>
+
+    <div id="AddUserVehicle" class="tabcontent">
+        <br>
+        <h1 id="h3">Add User Vehicle</h1>
+        <br><br>
+        <div class="btn-group">
+            <a href="addUserVehicle"><button type="button" class="btn btn-primary">Add User Vehicle</button></a>
+            <br>
+            <br>
+        </div>
+        <br><br><br><br>
+        <form method="POST" action="/addUserVehicle">
+            <div class="form-group">
+                <label for="user_id">User ID:</label>
+                <input type="text" class="form-control" id="user_id" name="user_id" required>
+            </div>
+            <div class="form-group">
+                <label for="vehicle_id">Vehicle ID:</label>
+                <input type="text" class="form-control" id="vehicle_id" name="vehicle_id" required>
+            </div>
+        </form>
+        <br><br><br>
+    </div>
+</body>
+</html>

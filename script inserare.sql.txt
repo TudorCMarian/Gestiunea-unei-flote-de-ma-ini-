@@ -1,0 +1,43 @@
+-- Insert data into the Brands table
+INSERT INTO Brands (Id, Name, Logo) VALUES (1, 'BMW', NULL);
+INSERT INTO Brands (Id, Name, Logo) VALUES (2, 'Lotus', NULL);
+INSERT INTO Brands (Id, Name, Logo) VALUES (3, 'Lexus', NULL);
+INSERT INTO Brands (Id, Name, Logo) VALUES (4, 'Tesla', NULL);
+INSERT INTO Brands (Id, Name, Logo) VALUES (5, 'Dacia', NULL);
+INSERT INTO Brands (Id, Name, Logo) VALUES (6, 'VW', NULL);
+
+-- Insert data into the Models table
+INSERT INTO Models (Id, Name, Model_Year, Fuel_Type, Brand_Id) VALUES (1, 'Duster', 2018, 0, 5);
+INSERT INTO Models (Id, Name, Model_Year, Fuel_Type, Brand_Id) VALUES (2, 'UX', 2021, 3, 3);
+INSERT INTO Models (Id, Name, Model_Year, Fuel_Type, Brand_Id) VALUES (3, 'Model 3', 2023, 5, 4);
+INSERT INTO Models (Id, Name, Model_Year, Fuel_Type, Brand_Id) VALUES (4, 'Elise 111S', 2010, 0, 2);
+
+-- Insert data into the Users table
+INSERT INTO Users (Id, First_Name, Last_Name, Email, Birth_Date, Registration_Date)
+VALUES (1, 'Antonio', 'Ionescu', 'exemplu@yahoo.ro', TO_DATE('2003-08-10', 'YYYY-MM-DD'), TO_TIMESTAMP('2023-03-04 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+INSERT INTO Users (First_Name, Last_Name, Email, Birth_Date, Registration_Date)
+VALUES ('Vasile', 'Matasa', 'vasilem@yahoo.ro', TO_DATE('1978-01-16', 'YYYY-MM-DD'), TO_TIMESTAMP('2023-05-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+INSERT INTO Users (First_Name, Last_Name, Email, Birth_Date, Registration_Date)
+VALUES ('Alin', 'Lopatnic', 'alinalin@hotmail.com', TO_DATE('2000-09-21', 'YYYY-MM-DD'), TO_TIMESTAMP('2023-03-05 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+INSERT INTO Users ( First_Name, Last_Name, Email, Birth_Date, Registration_Date)
+VALUES ('Alexandru', 'Lupascu', 'alexutzulup@yahoo.ro', TO_DATE('1998-02-04', 'YYYY-MM-DD'), TO_TIMESTAMP('2023-03-06 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+INSERT INTO Users (First_Name, Last_Name, Email, Birth_Date, Registration_Date)
+VALUES ('Ionut', 'Chitariu', 'alexionut@gmail.com', TO_DATE('1999-05-14', 'YYYY-MM-DD'), TO_TIMESTAMP('2023-03-10 00:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+
+select * from users;
+-- Insert data into the UserVehicles table
+INSERT INTO User_Vehicles (User_Id, Vehicle_Id) VALUES (1, 1);
+INSERT INTO User_Vehicles (User_Id, Vehicle_Id) VALUES (1, 3);
+
+-- Insert data into the Vehicles table
+INSERT INTO Vehicles (ID, VIN, License_Plate, Registration_Date, Exterior_Color, Model_Id)
+VALUES (1, '12345671234567890', 'IS-00-TST', TO_DATE('2011-01-01', 'YYYY-MM-DD'), 'Black', 4);
+INSERT INTO Vehicles (ID, VIN, License_Plate, Registration_Date, Exterior_Color, Model_Id)
+VALUES (2, '84501241234567890', 'B-000-ABC', TO_DATE('2022-06-01', 'YYYY-MM-DD'), 'Red', 2);
+INSERT INTO Vehicles (ID, VIN, License_Plate, Registration_Date, Exterior_Color, Model_Id)
+VALUES (3, 'UU1H5DA0N4B9722B2', 'IS-99-DUS', TO_DATE('2018-02-03', 'YYYY-MM-DD'), 'Blue Mamaia', 1);

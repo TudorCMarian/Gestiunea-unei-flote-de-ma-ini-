@@ -1,0 +1,174 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9E4952DB-A69B-FE21-761E-6B4CB0021350" schemaObject="EAA00E9C-BF12-F056-81C7-29F087BDA389" name="VEHICLES">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>BD138</sourceObjSchema>
+<sourceObjName>VEHICLES</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>F9DC8022-EF2F-6FD6-2937-186B240DC1CB</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="27931E9D-A1FE-FB31-EBFA-84280850CE63">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>VEHICLES</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>221A1525-6543-DAEE-FD3E-D00128F3A87E</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="VIN" id="09C9BED3-CA8D-632B-6989-2951287F0152">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>VEHICLES</sourceObjSchema>
+<sourceObjName>VIN</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>E70E7F8E-4ACD-E19D-F875-F361CBDAD11C</importedID>
+<constraintName>CHK_VEHICLES_VIN_FORMAT</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>17 BYTE</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="LENGTH(VIN) = 17 AND REGEXP_LIKE(VIN, &apos;^[A-HJ-NPR-Z0-9]+$&apos;)"/>
+<implementationDef dbType="Oracle Database 12cR2" definition="LENGTH(VIN) = 17 AND REGEXP_LIKE(VIN, &apos;^[A-HJ-NPR-Z0-9]+$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>17 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LICENSE_PLATE" id="6D40BAF8-4C42-B7A9-00BB-8F70B9189DB2">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>VEHICLES</sourceObjSchema>
+<sourceObjName>LICENSE_PLATE</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>BC9FC313-50B4-36D7-6A0B-B72AE5451C82</importedID>
+<constraintName>CHK_VEHICLES_LICENSEPLATEFORMAT</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="
+    (REGEXP_LIKE(License_Plate, &apos;^[A-Z]{2}-\d{2}-[A-Z0-9]{3}$&apos;) AND SUBSTR(License_Plate, 1, 1) != &apos;B&apos;)
+    OR
+    (REGEXP_LIKE(License_Plate, &apos;^B-\d{3}-[A-Z0-9]{3}$&apos;) AND SUBSTR(License_Plate, 1, 1) = &apos;B&apos;)
+"/>
+<implementationDef dbType="Oracle Database 12cR2" definition="
+    (REGEXP_LIKE(License_Plate, &apos;^[A-Z]{2}-\d{2}-[A-Z0-9]{3}$&apos;) AND SUBSTR(License_Plate, 1, 1) != &apos;B&apos;)
+    OR
+    (REGEXP_LIKE(License_Plate, &apos;^B-\d{3}-[A-Z0-9]{3}$&apos;) AND SUBSTR(License_Plate, 1, 1) = &apos;B&apos;)
+"/>
+</checkConstraint>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REGISTRATION_DATE" id="F8455A21-2B8E-AEBD-EAE3-1B27AED3D75C">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>VEHICLES</sourceObjSchema>
+<sourceObjName>REGISTRATION_DATE</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>D7EAE259-2538-2061-1842-3CECE2702424</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EXTERIOR_COLOR" id="D09DB546-62A6-0892-5ED0-C8A129CBEAD5">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>VEHICLES</sourceObjSchema>
+<sourceObjName>EXTERIOR_COLOR</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>57E574FD-03D0-5922-EF7B-1DA07DF9BF4A</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MODEL_ID" id="B3F7E690-548C-D8DE-9635-418BBC97A479">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>VEHICLES</sourceObjSchema>
+<sourceObjName>MODEL_ID</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>3FAA6F37-2745-4D54-54B2-2563999C5CC9</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="43616397-55B5-7762-3238-22420749EDA9" referredColumn="6140941F-E710-9089-F0FB-32E3283145A8"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="99D305CE-2DD5-F309-62B0-A474C2CCD10A" name="PK_VEHICLES">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>BD138</sourceObjSchema>
+<sourceObjName>PK_VEHICLES</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>A06D87CC-AC5E-2EAB-5BF1-1914112B4ED7</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="27931E9D-A1FE-FB31-EBFA-84280850CE63"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9C5AF0F5-78AE-0855-C720-A411813A8D58" schemaObject="EAA00E9C-BF12-F056-81C7-29F087BDA389" name="PK_VEHICLES">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>BD138</sourceObjSchema>
+<sourceObjName>PK_VEHICLES</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>D40E40B9-7DA5-1E9F-38CC-7494352CEABF</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="27931E9D-A1FE-FB31-EBFA-84280850CE63"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1CAA57E8-7232-66BB-5CD1-869FAE1E0AA2" name="FK_VEHICLES_MODELS">
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B3F7E690-548C-D8DE-9635-418BBC97A479"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

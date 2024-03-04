@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="A3AD40E2-0032-D354-6D2E-9F6B79714450" mainViewID="F5723D75-3695-FA94-55A9-BBAB11F87805">
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:18:38 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

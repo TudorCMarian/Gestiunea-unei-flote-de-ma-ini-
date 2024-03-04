@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+
+  @font-face {
+    font-family: 'SansationLight';
+    src: url('./FontSansationLight/SansationLight.eot');
+    src: local('SansationLight'), url('./FontSansationLight/SansationLight.woff') format('woff'), url('./FontSansationLight/SansationLight.ttf') format('truetype');
+  }
+  * {box-sizing: border-box}
+
+  /* Set height of body and the document to 100% */
+  body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'SansationLight' !important;
+      background: rgb(22,22,22);
+  }
+
+  /* Style tab links */
+  .tablink {
+    font-weight: bold;
+    font-family: 'SansationLight' !important;
+      background-color: #557;
+      color: azure;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 12px 12px;
+      font-size: 17px;
+      width: 12.5%;
+  }
+
+  .tablink:hover {
+      background-color: #579;
+  }
+
+  /* Style the tab content (and add height:100% for full page content) */
+  .tabcontent {
+      color: white;
+      padding: 100px 20px;
+      height: 100%;
+  }
+
+  table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      border-color: white;
+      text-align: center;
+  }
+  th, td {
+      padding: 15px;
+  }
+
+  .radiotext {
+      margin: 10px 10px 0px 0px;
+  }
+
+  </style>
+</head>
+<body>
+
+  <a href="users"><button class="tablink">Users</button></a>
+  <a href="vehicles"><button class="tablink" style="background:rgb(70,130,180); color: white">Vehicles</button></a>
+  <a href="brands"><button class="tablink">Brands</button></a>
+  <a href="models"><button class="tablink">Models</button></a>
+  <a href="userVehicles"><button class="tablink">User Vehicles</button></a>
+ <a href="privacy"><button class="tablink">Privacy</button></a>
+
+
+  <div id="Vehicles" class="tabcontent">
+      <br>
+      <h1 id="h3">Vehicles</h1>
+      <br><br>
+      <div class="btn-group">
+        <a href="addVehicle"><button type="button" class="btn btn-primary">Add Vehicle</button></a>
+        <br>
+      </div>
+      <br><br><br><br>
+      <table style="width:70%">
+        <tr>
+          <th>Nr. crt.</th>
+          <th>VIN</th>
+          <th>License Plate</th>
+          <th>Registration Date</th>
+          <th>Exterior Color</th>
+          <th>Model </th>
+          <th>Edit/Delete</th>
+        </tr>
+        {% for vehicle in vehicles %}
+        <tr>
+          <td>{{loop.index}}</td>
+          <td>{{vehicle["vin"]}}</td>
+          <td>{{vehicle["license_plate"]}}</td>
+          <td>{{vehicle["registration_date"]}}</td>
+          <td>{{vehicle["exterior_color"]}}</td>
+          <td>{{vehicle["name"]}}</td>
+          <td>
+              <form class="was-validated" method="POST" action="/delVehicle">
+                  <button type="submit" name="id" value="{{vehicle['id']}}" class="btn btn-primary">Delete Vehicle</button>
+                </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+      <br><br><br>
+  </div>
+</body>
+</html>

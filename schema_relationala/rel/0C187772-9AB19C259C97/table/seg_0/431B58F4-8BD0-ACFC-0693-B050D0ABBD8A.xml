@@ -1,0 +1,150 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="431B58F4-8BD0-ACFC-0693-B050D0ABBD8A" schemaObject="EAA00E9C-BF12-F056-81C7-29F087BDA389" name="DRIVER_LICENSES">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>BD138</sourceObjSchema>
+<sourceObjName>DRIVER_LICENSES</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>0B96D3E7-7399-2137-F081-72BBC17AB4C1</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="54C0D651-7ABF-ABC3-BCB5-255C858814DF">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>DRIVER_LICENSES</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>6EFA8C9E-366C-C5D5-5A57-9A08AC533C8D</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="USER_ID" id="0DB57BE9-EDA2-1724-D978-378D074DE541">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>DRIVER_LICENSES</sourceObjSchema>
+<sourceObjName>USER_ID</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>A863B578-FE77-779F-4DAD-C644DA8A33FB</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="791AE477-CD4D-E773-4BB7-CDBC50D3A0AF" referredColumn="6D71C8ED-D51E-850E-3A67-167970566B46"/>
+</associations>
+</Column>
+<Column name="ISSUED_DATE" id="45547A1A-1A96-6625-D802-74F47CD455BB">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>DRIVER_LICENSES</sourceObjSchema>
+<sourceObjName>ISSUED_DATE</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>A0C99F2B-73C4-E989-7CB3-8E276AB81CD8</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EXPIRATION_DATE" id="4239D02C-A060-3ABC-DBEA-233C6CBE16E6">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>DRIVER_LICENSES</sourceObjSchema>
+<sourceObjName>EXPIRATION_DATE</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>23AAF72C-B252-D836-0A52-624146C6072F</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CATEGORIES" id="6DFB2C29-AF4D-F972-7A25-7665AB04F1CF">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>DRIVER_LICENSES</sourceObjSchema>
+<sourceObjName>CATEGORIES</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>91A61133-8FE5-C89B-0B5D-ADA7D6FEEA9E</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F7337084-EB63-E220-59C1-22A31DE8C74A" name="DRIVER_LICENSES_PK">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>BD138</sourceObjSchema>
+<sourceObjName>DRIVER_LICENSES_PK</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>2E5A6A6A-F023-F8FD-4851-993B3BFB04E0</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="54C0D651-7ABF-ABC3-BCB5-255C858814DF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8A876487-745F-E8CA-1DA4-5EDA912097D5" schemaObject="EAA00E9C-BF12-F056-81C7-29F087BDA389" name="DRIVER_LICENSES_PK">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>BD138</sourceObjSchema>
+<sourceObjName>DRIVER_LICENSES_PK</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>666F90CD-0A47-9AB9-8787-658389C398FB</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="54C0D651-7ABF-ABC3-BCB5-255C858814DF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="53713A61-5AA8-6161-01D5-A68FC26A4B73" name="FK_USER">
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0DB57BE9-EDA2-1724-D978-378D074DE541"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="CHK_EXPIRATION_DATE" directorySegmentName="seg_0" id="52492C64-E4DE-2A9E-0CA1-EEEF48BCAB5E">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>BD138</sourceObjSchema>
+<sourceObjName>CHK_EXPIRATION_DATE</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>28136D94-9AD6-2534-D9C1-6607134366B4</importedID>
+<rule><![CDATA[expiration_date = issued_date + INTERVAL '10' YEAR]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

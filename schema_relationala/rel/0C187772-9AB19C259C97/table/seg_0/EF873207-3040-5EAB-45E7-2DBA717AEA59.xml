@@ -1,0 +1,196 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EF873207-3040-5EAB-45E7-2DBA717AEA59" schemaObject="EAA00E9C-BF12-F056-81C7-29F087BDA389" name="USERS">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>BD138</sourceObjSchema>
+<sourceObjName>USERS</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>9D0E22B7-110E-054F-98E5-C1A81D07059F</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="6D71C8ED-D51E-850E-3A67-167970566B46">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>22B1B790-BEBF-C851-93A8-551F3E54776B</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="FIRST_NAME" id="987C9CFB-0F97-B964-7A01-566663BE18D8">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>FIRST_NAME</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>A621E6EA-8FA8-97CF-8DAB-A389B5343493</importedID>
+<constraintName>USERS_FIRST_NAME_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition=" length(first_name) &gt; 1
+                                           AND REGEXP_LIKE ( first_name,
+                                                             &apos;^[A-Za-z&apos;&apos;-]+$&apos; ) "/>
+<implementationDef dbType="Oracle Database 12cR2" definition=" length(first_name) &gt; 1
+                                           AND REGEXP_LIKE ( first_name,
+                                                             &apos;^[A-Za-z&apos;&apos;-]+$&apos; ) "/>
+</checkConstraint>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_NAME" id="0646997A-5FC9-20C1-8EAD-CAB5F83CB95D">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>LAST_NAME</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>A69E3DE6-78BE-1832-7835-50A732B00B5D</importedID>
+<constraintName>USERS_LAST_NAME_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition=" length(last_name) &gt; 1
+                                              AND REGEXP_LIKE ( last_name,
+                                                                &apos;^[A-Za-z&apos;&apos;-]+$&apos; ) "/>
+<implementationDef dbType="Oracle Database 12cR2" definition=" length(last_name) &gt; 1
+                                              AND REGEXP_LIKE ( last_name,
+                                                                &apos;^[A-Za-z&apos;&apos;-]+$&apos; ) "/>
+</checkConstraint>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="8D004541-B1F5-F0EA-A2D6-D41047B16E47">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>EMAIL</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>C15D9760-6942-EEBD-E7C1-7EA1FC92B2EA</importedID>
+<constraintName>USERS_EMAIL_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>230</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition=" REGEXP_LIKE ( email,
+                                                          &apos;[a-z0-9._%-]+@[a-z0-9._%-]+\.[a-z]{2,4}&apos; ) "/>
+<implementationDef dbType="Oracle Database 12cR2" definition=" REGEXP_LIKE ( email,
+                                                          &apos;[a-z0-9._%-]+@[a-z0-9._%-]+\.[a-z]{2,4}&apos; ) "/>
+</checkConstraint>
+<ownDataTypeParameters>230,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BIRTH_DATE" id="1F479889-F4BA-1821-3D17-38D3EEA7B098">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>BIRTH_DATE</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>E7934072-79AA-0201-748B-DAA20BD4EB74</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REGISTRATION_DATE" id="543D314D-A574-1957-0DC4-3F4D6432296C">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>REGISTRATION_DATE</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>1DC5B88D-200A-E318-011F-2F2CFFC8C1DF</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="046BD924-1FDF-EA93-2596-3971C7C9C50F" name="PK_USERS">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>BD138</sourceObjSchema>
+<sourceObjName>PK_USERS</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>1D58E11E-F659-7C17-9196-6602F3452BF0</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6D71C8ED-D51E-850E-3A67-167970566B46"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3CC363F8-5C1A-2FF2-ABB4-BB23CF65006A" name="USERS_EMAIL_UK">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>BD138</sourceObjSchema>
+<sourceObjName>USERS_EMAIL_UK</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>0E2E9E13-9BB5-5CBB-862F-D658500670AC</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8D004541-B1F5-F0EA-A2D6-D41047B16E47"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="59B74F5C-01F1-AAF4-F400-D4BE36292995" schemaObject="EAA00E9C-BF12-F056-81C7-29F087BDA389" name="PK_USERS">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>BD138</sourceObjSchema>
+<sourceObjName>PK_USERS</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>5B417A20-8098-25CF-BC51-E74FC2187B37</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6D71C8ED-D51E-850E-3A67-167970566B46"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1EA6930F-2E03-A9F5-46F7-FCEC952ACA00" schemaObject="EAA00E9C-BF12-F056-81C7-29F087BDA389" name="USERS_EMAIL_UK">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>BD138</sourceObjSchema>
+<sourceObjName>USERS_EMAIL_UK</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>BC9191D6-9E0B-097A-9A31-4588D6B4AC02</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8D004541-B1F5-F0EA-A2D6-D41047B16E47"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

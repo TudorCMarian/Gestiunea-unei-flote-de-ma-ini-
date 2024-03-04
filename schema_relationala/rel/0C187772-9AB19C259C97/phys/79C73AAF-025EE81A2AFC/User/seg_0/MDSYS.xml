@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="MDSYS" directorySegmentName="seg_0" id="MDSYS">
+<sourceConnName>ok</sourceConnName>
+<sourceObjName>MDSYS</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:19:06 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<schemaObject>9D2C4A4E-0C64-BC68-52AE-BF9179AFC93D</schemaObject>
+<nullInstance>true</nullInstance>
+<storableNullInstance>true</storableNullInstance>
+</UserOraclev10g>

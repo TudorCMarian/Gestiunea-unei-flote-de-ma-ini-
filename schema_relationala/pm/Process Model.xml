@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="F8E39E7A-93BF-7D21-E4DA-07443A808F4C">
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:18:38 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>

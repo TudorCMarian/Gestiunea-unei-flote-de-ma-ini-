@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="USER_VEHICLES" directorySegmentName="seg_0" id="21943560-4A8B-E645-F544-A1C8B9A2A88A">
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<schemaObject>EAA00E9C-BF12-F056-81C7-29F087BDA389</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>86EE6E65-CCEB-A582-77F7-4F0083F77E60</segment>
+<tableSpace>85D1CCE1-F403-A717-066A-3BDD2E07C38A</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="VEHICLE_ID" id="88FE1A52-52B6-0D1F-F21E-360E55135DF6">
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USER_ID" id="E37101B7-E431-85D9-0EEF-7E6F3C72DAB8">
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PK_USERVEHICLES" id="A9174DD5-DDFD-E06F-D916-37621CE0DCAD">
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<schemaObject>EAA00E9C-BF12-F056-81C7-29F087BDA389</schemaObject>
+<segment>BB7B249E-659B-51FC-50BB-E9FE7175F153</segment>
+<tableSpace>85D1CCE1-F403-A717-066A-3BDD2E07C38A</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_USERVEHICLES_USERS" id="8EAC41A8-7BB5-8DC6-3C14-1DC8EFCF549B">
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_USERVEHICLES_VEHICLES" id="AEF3A2B0-A85A-0A90-F78F-E8AC1D3772B9">
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_USERVEHICLES" id="432101A6-21B7-6FE7-FF1B-16395577338A">
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<segment>BB7B249E-659B-51FC-50BB-E9FE7175F153</segment>
+<tableSpace>85D1CCE1-F403-A717-066A-3BDD2E07C38A</tableSpace>
+<existingIndex>A9174DD5-DDFD-E06F-D916-37621CE0DCAD</existingIndex>
+<indexSegment>BB7B249E-659B-51FC-50BB-E9FE7175F153</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

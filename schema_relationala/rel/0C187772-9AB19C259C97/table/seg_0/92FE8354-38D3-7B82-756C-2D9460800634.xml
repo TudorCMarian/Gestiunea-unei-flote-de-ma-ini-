@@ -1,0 +1,136 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="92FE8354-38D3-7B82-756C-2D9460800634" schemaObject="EAA00E9C-BF12-F056-81C7-29F087BDA389" name="MODELS">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>BD138</sourceObjSchema>
+<sourceObjName>MODELS</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>0464E183-35D1-F936-1837-CFA9CF2B7318</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="6140941F-E710-9089-F0FB-32E3283145A8">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>MODELS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>C206BD51-7E04-AEEA-31FA-BD801FAB7855</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="NAME" id="5A88C1D5-37D3-C6C1-5CAB-C10846E1C171">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>MODELS</sourceObjSchema>
+<sourceObjName>NAME</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>F8D3BD4F-D9C7-11D0-94BA-8589715F8AA7</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MODEL_YEAR" id="926D80FF-06A7-E652-A76D-ADA250C1F387">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>MODELS</sourceObjSchema>
+<sourceObjName>MODEL_YEAR</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>28579A12-1212-B043-F8E8-339F030800BF</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FUEL_TYPE" id="A27BE3F9-28CC-51A6-EB90-5FBD6B2B69D6">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>MODELS</sourceObjSchema>
+<sourceObjName>FUEL_TYPE</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>4046C490-D0FE-1236-CBCE-28F93AA85073</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BRAND_ID" id="9275AAEF-F3D5-1E59-A330-09BF59E96A27">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>MODELS</sourceObjSchema>
+<sourceObjName>BRAND_ID</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>515A1B59-718A-17AC-01F4-3DD0D173B4DE</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B0C03DE5-342B-9FDF-A816-8C38D579A594" referredColumn="28386F98-F8AC-3B05-3E54-E8B03E44EC8B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="559344C2-5E6D-090B-D1AF-4AF9CA837CF6" name="PK_MODELS">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>BD138</sourceObjSchema>
+<sourceObjName>PK_MODELS</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>9E0F5410-39F0-CF9C-C26D-F2DAB2ADE776</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6140941F-E710-9089-F0FB-32E3283145A8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C7BEC31C-E8C7-3447-82E7-DF997E348D94" schemaObject="EAA00E9C-BF12-F056-81C7-29F087BDA389" name="PK_MODELS">
+<sourceConnName>ok</sourceConnName>
+<sourceObjSchema>BD138</sourceObjSchema>
+<sourceObjName>PK_MODELS</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<importedID>AE9E7931-D2A3-F340-856C-DCD6A7D0C2A7</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6140941F-E710-9089-F0FB-32E3283145A8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="717025AF-BC56-0FD8-FD24-4981659A9EDE" name="FK_MODELS_BRANDS">
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:21:44 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9275AAEF-F3D5-1E59-A330-09BF59E96A27"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

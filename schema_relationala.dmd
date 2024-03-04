@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="schema_relationala" id="2FE76270-266E-9A6F-1995-FE4F590F179B" version="3.5">
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:18:38 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>2FE76270-266E-9A6F-1995-FE4F590F179B</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="ACC5E3DE-915A-0B29-CA29-DAE59BFEBC9B">
+<designStoragePath>C:\</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

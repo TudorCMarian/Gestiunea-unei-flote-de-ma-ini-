@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="BD138" directorySegmentName="seg_0" id="ADE7A4F8-31C3-1CE7-7021-BCBC86E80FA4">
+<sourceConnName>ok</sourceConnName>
+<sourceObjName>BD138</sourceObjName>
+<createdBy>Tudor</createdBy>
+<createdTime>2024-01-06 23:20:36 UTC</createdTime>
+<ownerDesignName>schema_relationala</ownerDesignName>
+<schemaObject>EAA00E9C-BF12-F056-81C7-29F087BDA389</schemaObject>
+</UserOraclev10g>
